@@ -87,13 +87,18 @@ export async function boot({ film, width, height, fps, android }) {
   //   { at: <seconds inside the shot>, aim: [x,y,z] | (lt, dur) => [x,y,z], pos: [..] | fn, shift: [dx,dy,dz], zoom: 1.6,
   //     follow: n (keep the n-th figure of the scene centred: camera pans with it, same offset), followY: 1.3 (aim height),
   //     dist: 1.6 (scale the camera's distance from its target), camera: (lt, dur, c) => ({ pos, target, fov }) }, ... ] })
-  //   (at = any time inside that shot, incl. angle cuts)
+  //   (at = any time inside that shot, incl. angle cuts); titles: [{ str, at?, pos: [x, y] in the safe area }]
   const portrait = height > width;
   let VZ = 1.5, VD = 1.2;   // default portrait framing: wider lens + camera pulled back (less 'zoomed in')
   if (portrait) {
     let V = null;
     try { const vm = await import(film.replace(/film\.js$/, 'vertical.js')); V = typeof vm.default === 'function' ? await vm.default() : vm.default; } catch (e) { if (!/Failed to fetch|404|Cannot find/.test(String(e))) console.error('vertical.js', e); }
     if (V) { VZ = V.zoom ?? VZ; VD = V.dist ?? VD; for (const o of V.shots || []) { const s = shots.find(s => o.at >= s.t0 && o.at < s.t1); if (s) s.vo = o; else console.warn('vertical.js: no shot at', o.at); } }
+    // titles: [{ str: 'A WAITER', at?: <s>, pos: [x, y] }] moves a title inside the UI-safe area (0..1 of its width/height)
+    if (V) for (const o of V.titles || []) {
+      const it = (F.texts || []).find(x => x.str.toUpperCase() === o.str.toUpperCase() && (o.at == null || (o.at >= x.t0 - 0.2 && o.at <= x.t1)));
+      if (it) it.vpos = o.pos; else console.warn('vertical.js: no title', o.str);
+    }
   }
   for (const x of F.texts || []) {
     const sh = shots.find(s => x.t0 + 0.12 >= s.t0 && x.t0 + 0.12 < s.t1);

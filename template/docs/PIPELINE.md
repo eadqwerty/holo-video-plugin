@@ -81,6 +81,7 @@ Render every new episode this way. Do the 16:9 render (section 5) only when the 
   - `follow: n` keeps the n-th figure centred;
   - `dist: k` pulls back;
   - `aim`, `pos`, `shift` or `camera` take over the camera completely.
+  - `titles: [{ str, at?, pos: [x, y] }]` moves a title that would sit on the figure (position inside the UI-safe area, 0..1).
 
-  See `films/ep003_too_busy/vertical.js`.
+  See `films/ep001_open_loops/vertical.js`, `films/ep002_doorways/vertical.js` and `films/ep003_too_busy/vertical.js`.
 - Render: `node engine/tools/render_vertical.mjs --film films/<ep>/film.js --out renders/vertical/<ep>_vN_vertical_video.mp4 --workers 4`. Add the same `audio/mix.wav` with ffmpeg; the sound cues are the same as the 16:9 version.

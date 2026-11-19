@@ -89,6 +89,7 @@ export class TextLayer {
         const side = it.pos[0] < 0.4 ? -1 : it.pos[0] > 0.6 ? 1 : 0;
         cx = side < 0 ? X0 + dw / 2 - r.pad * sc : side > 0 ? X1 - dw / 2 + r.pad * sc : (X0 + X1) / 2;
         cy = Y0 + 0.05 * this.h + clamp((it.pos[1] - 0.12) / 0.74) * (Y1 - Y0 - 0.1 * this.h) + (side > 0 && it.pos[1] < 0.3 ? 0.055 * this.h : 0);
+        if (it.vpos) { cx = X0 + it.vpos[0] * (X1 - X0); cy = Y0 + it.vpos[1] * (Y1 - Y0); }   // vertical.js title override
         cx = Math.min(Math.max(cx, X0 + dw / 2 - r.pad * sc), X1 - dw / 2 + r.pad * sc);
         cy = Math.min(Math.max(cy, Y0 + dh / 2), Y1 - dh / 2);
       } else {
@@ -166,11 +167,11 @@ export class HudLayer {
       if (out > 0 && hash2(frame, 9) < out) continue;               // flicker off
       if (pin < 1 && hash2(frame, 2) > 0.35 + pin) continue;        // flicker on
       const [x, y] = p;
-      let side = c.side ?? 1;
+      let side = c.side ?? 1, lw;
       g.save();
       { // vertical: flip the label to the other side if it would run off the frame
         g.font = `500 ${19 * s}px PlexMono, ShareMono, monospace`;
-        const lw = 68 * s + Math.max(g.measureText((c.label || '') + (c.value ? ': ' + c.value : '')).width, g.measureText('x  0000   y. 0000').width);
+        lw = 68 * s + Math.max(g.measureText((c.label || '') + (c.value ? ': ' + c.value : '')).width, g.measureText('x  0000   y. 0000').width);
         const X0 = this.portrait ? SAFE.x0 * this.w : 12 * s, X1 = this.portrait ? SAFE.x1 * this.w : this.w - 12 * s;
         if (side > 0 && x + lw > X1) side = -1; else if (side < 0 && x - lw < X0) side = 1;
       }
@@ -186,8 +187,8 @@ export class HudLayer {
       let lx = x + side * 60 * s * ease.outCubic(pin), ly = y - 34 * s;
       if (this.portrait) {   // keep the label block inside the safe area (the leader line bends to reach it)
         ly = Math.min(Math.max(ly, SAFE.y0 * this.h + 44 * s), SAFE.y1 * this.h);
-        const lw2 = 210 * s;
-        lx = side > 0 ? Math.min(lx, SAFE.x1 * this.w - lw2) : Math.max(lx, SAFE.x0 * this.w + lw2);
+        const bw = lw - 56 * s, X0 = SAFE.x0 * this.w, X1 = SAFE.x1 * this.w;   // label block width; both edges stay inside
+        lx = side > 0 ? Math.max(X0, Math.min(lx, X1 - bw)) : Math.min(X1, Math.max(lx, X0 + bw));
       }
       g.strokeStyle = ink; g.lineWidth = 1.2 * s;
       g.beginPath(); g.moveTo(x + side * (c.ring !== false ? 20 * s : 0), y - 6 * s); g.lineTo(lx, ly); g.stroke();

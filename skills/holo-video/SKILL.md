@@ -92,13 +92,16 @@ film: `films/ep002_doorways/film.js` is the most complete, and `films/ep003_too_
 6. **Look-dev stills (vertical).** Render a frame every ~2 s and LOOK at every one:
    - `node engine/tools/render_vertical.mjs --film films/<ep>/film.js --stills 0.8,2.8,4.8,... --outdir analysis/<ep>_vert --size 540x960`
    - `$PY tools/sheet.py analysis/<ep>_vert/sheetA.jpg 9 213 analysis/<ep>_vert/t*.png` (18 per sheet).
-   - Fix shots whose subject is off-centre or cut off by adding `films/<ep>/vertical.js` (copy the ep003 one). Each
+   - Fix shots whose subject is off-centre or cut off by adding `films/<ep>/vertical.js` (copy the ep001, ep002 or ep003 one). Each
      entry picks the shot playing at `at` (use `cut('lNN')` / `w('word')`) and adjusts its camera:
      - `follow: n` keeps the n-th figure of the scene centred (figures count in creation order);
      - `followY` sets the aim height;
      - `dist: k` pulls back, multiplying the default;
      - `zoom` sets the lens;
      - `aim`, `pos`, `shift` or `camera: (lt, dur, c) => ({pos, target, fov})` give full control.
+   - A title that lands on the figure moves with `titles: [{ str: 'A waiter', pos: [0.5, 0.0] }]` in the same file
+     (position inside the UI-safe area, [0,0] top-left to [1,1] bottom-right; optional `at` picks one of repeated titles).
+     ep001 and ep002 use both.
    - Also fix props that are too small, unreadable titles and empty frames in `film.js`. Re-render the changed shots.
 7. **Render and sound:**
    - `node engine/tools/render_vertical.mjs --film films/<ep>/film.js --cues films/<ep>/audio/cues.json`

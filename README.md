@@ -19,8 +19,6 @@ You need Claude Code, plus Node 18+, Python 3.10–3.13 and ffmpeg on the comput
    /plugin install holo-video@holo-video
    ```
    Restart Claude Code if it asks.
-   - The repo is private, so the device must be logged in to GitHub as an account with access. Run
-     `gh auth login` once, or have git credentials for github.com.
    - From a local copy instead: `/plugin marketplace add /path/to/holo-video-plugin`.
 2. Update later with `/plugin marketplace update holo-video`, then `/plugin update holo-video@holo-video`.
 3. Make an empty folder for your videos, open Claude Code in it and run:

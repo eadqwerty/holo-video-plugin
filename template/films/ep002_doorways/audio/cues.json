@@ -1,0 +1,307 @@
+{
+ "duration": 61.528,
+ "cuts": [
+  {
+   "t": 2.968,
+   "kind": "smear",
+   "toWhite": true
+  },
+  {
+   "t": 5.9719999999999995,
+   "kind": "smear",
+   "toWhite": false
+  },
+  {
+   "t": 8.992,
+   "kind": "cut",
+   "toWhite": false
+  },
+  {
+   "t": 11.192,
+   "kind": "cut",
+   "toWhite": false
+  },
+  {
+   "t": 13.877,
+   "kind": "smear",
+   "toWhite": true
+  },
+  {
+   "t": 16.096999999999998,
+   "kind": "cut",
+   "toWhite": true
+  },
+  {
+   "t": 18.201,
+   "kind": "zoom",
+   "toWhite": false
+  },
+  {
+   "t": 19.921,
+   "kind": "cut",
+   "toWhite": false
+  },
+  {
+   "t": 23.281,
+   "kind": "smear",
+   "toWhite": true
+  },
+  {
+   "t": 24.461,
+   "kind": "cut",
+   "toWhite": true
+  },
+  {
+   "t": 25.967,
+   "kind": "zoom",
+   "toWhite": false
+  },
+  {
+   "t": 28.967,
+   "kind": "cut",
+   "toWhite": false
+  },
+  {
+   "t": 30.426,
+   "kind": "whip",
+   "toWhite": true
+  },
+  {
+   "t": 32.565999999999995,
+   "kind": "cut",
+   "toWhite": true
+  },
+  {
+   "t": 34.927,
+   "kind": "smear",
+   "toWhite": false
+  },
+  {
+   "t": 36.727,
+   "kind": "cut",
+   "toWhite": false
+  },
+  {
+   "t": 37.677,
+   "kind": "glitch",
+   "toWhite": true
+  },
+  {
+   "t": 40.521,
+   "kind": "smear",
+   "toWhite": false
+  },
+  {
+   "t": 43.461,
+   "kind": "cut",
+   "toWhite": false
+  },
+  {
+   "t": 44.193000000000005,
+   "kind": "whip",
+   "toWhite": true
+  },
+  {
+   "t": 46.646,
+   "kind": "smear",
+   "toWhite": false
+  },
+  {
+   "t": 48.065999999999995,
+   "kind": "cut",
+   "toWhite": false
+  },
+  {
+   "t": 48.663000000000004,
+   "kind": "smear",
+   "toWhite": true
+  },
+  {
+   "t": 50.663,
+   "kind": "cut",
+   "toWhite": true
+  },
+  {
+   "t": 53.146,
+   "kind": "zoom",
+   "toWhite": false
+  },
+  {
+   "t": 56.469,
+   "kind": "glitch",
+   "toWhite": true
+  },
+  {
+   "t": 57.782000000000004,
+   "kind": "zoom",
+   "toWhite": false
+  },
+  {
+   "t": 58.972,
+   "kind": "cut",
+   "toWhite": false
+  }
+ ],
+ "glitches": [
+  {
+   "t": 5.318,
+   "d": 0.08,
+   "a": 0.6
+  },
+  {
+   "t": 24.811,
+   "d": 0.1,
+   "a": 0.7
+  },
+  {
+   "t": 38.927,
+   "d": 0.12,
+   "a": 0.9
+  },
+  {
+   "t": 56.979000000000006,
+   "d": 0.1,
+   "a": 0.7
+  }
+ ],
+ "texts": [
+  {
+   "t0": 1.46,
+   "t1": 2.66,
+   "str": "Forget why"
+  },
+  {
+   "t0": 3.588,
+   "t1": 4.588,
+   "str": "Not your memory"
+  },
+  {
+   "t0": 5.168,
+   "t1": 5.941999999999999,
+   "str": "It's the door"
+  },
+  {
+   "t0": 6.172000000000001,
+   "t1": 8.572000000000001,
+   "str": "2011"
+  },
+  {
+   "t0": 11.192,
+   "t1": 13.392,
+   "str": "Notre Dame"
+  },
+  {
+   "t0": 16.737,
+   "t1": 18.171,
+   "str": "Room after room"
+  },
+  {
+   "t0": 21.200999999999997,
+   "t1": 22.600999999999996,
+   "str": "Same distance"
+  },
+  {
+   "t0": 24.660999999999998,
+   "t1": 25.936999999999998,
+   "str": "Forgot more"
+  },
+  {
+   "t0": 27.987,
+   "t1": 28.936999999999998,
+   "str": "Not a film"
+  },
+  {
+   "t0": 29.506999999999998,
+   "t1": 30.395999999999997,
+   "str": "Scenes"
+  },
+  {
+   "t0": 31.926000000000002,
+   "t1": 32.535999999999994,
+   "str": "Scene over"
+  },
+  {
+   "t0": 34.146,
+   "t1": 34.897,
+   "str": "Start fresh"
+  },
+  {
+   "t0": 36.727,
+   "t1": 37.647,
+   "str": "Event boundary"
+  },
+  {
+   "t0": 38.777,
+   "t1": 39.777,
+   "str": "A glitch?"
+  },
+  {
+   "t0": 39.717,
+   "t1": 40.491,
+   "str": "A tool"
+  },
+  {
+   "t0": 43.461,
+   "t1": 44.163000000000004,
+   "str": "Out loud"
+  },
+  {
+   "t0": 45.753,
+   "t1": 46.616,
+   "str": "On purpose"
+  },
+  {
+   "t0": 47.806,
+   "t1": 48.035999999999994,
+   "str": "Can't put down"
+  },
+  {
+   "t0": 48.065999999999995,
+   "t1": 48.633,
+   "str": "Tonight"
+  },
+  {
+   "t0": 50.663,
+   "t1": 51.663,
+   "str": "Walk out"
+  },
+  {
+   "t0": 52.323,
+   "t1": 53.116,
+   "str": "Let the scene end"
+  },
+  {
+   "t0": 53.426,
+   "t1": 54.726,
+   "str": "Every room"
+  },
+  {
+   "t0": 55.745999999999995,
+   "t1": 56.439,
+   "str": "One question"
+  },
+  {
+   "t0": 56.929,
+   "t1": 57.752,
+   "str": "What do we keep?"
+  },
+  {
+   "t0": 58.042,
+   "t1": 60.928,
+   "str": "What did you leave in the last room?"
+  }
+ ],
+ "hud": [
+  1.7,
+  9.472,
+  18.701,
+  20.501,
+  23.581,
+  41.121,
+  50.163000000000004
+ ],
+ "logo": [
+  11.592,
+  61.028
+ ]
+}

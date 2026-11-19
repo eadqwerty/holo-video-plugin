@@ -1,0 +1,105 @@
+{
+  "title": "Open Loops",
+  "voice": "am_michael",
+  "speed": 1.08,
+  "lead": 0.1,
+  "tail": 1.6,
+  "lines": [
+    {
+      "id": "l01",
+      "text": "There's something you started, and never finished.",
+      "pause": 0.18
+    },
+    {
+      "id": "l02",
+      "text": "And part of your mind is still working on it. Right now.",
+      "pause": 0.34
+    },
+    {
+      "id": "l03",
+      "text": "In the 1920s, in a Berlin café, a psychologist noticed something strange about a waiter.",
+      "pause": 0.16
+    },
+    {
+      "id": "l04",
+      "text": "He never wrote anything down. He remembered every open order. Perfectly.",
+      "pause": 0.17
+    },
+    {
+      "id": "l05",
+      "text": "But the moment a bill was paid, it was gone.",
+      "pause": 0.33
+    },
+    {
+      "id": "l06",
+      "text": "His student, Bluma Zeigarnik, took it into the lab.",
+      "pause": 0.14
+    },
+    {
+      "id": "l07",
+      "text": "She gave people simple tasks, and interrupted half of them.",
+      "pause": 0.15
+    },
+    {
+      "id": "l08",
+      "text": "Later, they remembered the unfinished ones almost twice as well.",
+      "pause": 0.17
+    },
+    {
+      "id": "l09",
+      "text": "An open loop keeps running. In the background.",
+      "pause": 0.31
+    },
+    {
+      "id": "l10",
+      "text": "That's the idea you keep almost starting. The message you never sent. The thing you'll do someday.",
+      "pause": 0.15
+    },
+    {
+      "id": "l11",
+      "text": "Every one of them is an open tab in your head.",
+      "pause": 0.34
+    },
+    {
+      "id": "l12",
+      "text": "But here's the part nobody tells you.",
+      "pause": 0.17
+    },
+    {
+      "id": "l13",
+      "text": "You don't have to finish it to close it.",
+      "pause": 0.15
+    },
+    {
+      "id": "l14",
+      "text": "Researchers found that just making a specific plan quiets the loop.",
+      "pause": 0.15
+    },
+    {
+      "id": "l15",
+      "text": "Your brain doesn't need it done. It needs it decided.",
+      "pause": 0.31
+    },
+    {
+      "id": "l16",
+      "text": "So pick one. Write down exactly when.",
+      "pause": 0.14
+    },
+    {
+      "id": "l17",
+      "text": "Or start it for two minutes. Tonight.",
+      "pause": 0.28
+    },
+    {
+      "id": "l18",
+      "text": "Because you're carrying all of them either way.",
+      "pause": 0.28
+    },
+    {
+      "id": "l19",
+      "text": "So which one is still running?",
+      "pause": 0.1
+    }
+  ],
+  "pace_note": "House pace (middle, locked 2026-11-19): ~174 wpm, pauses 0.12-0.18, beats 0.28-0.34."
+}

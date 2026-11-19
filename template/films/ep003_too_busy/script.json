@@ -1,0 +1,120 @@
+{
+  "title": "Too Busy to See",
+  "voice": "am_michael",
+  "speed": 1.07,
+  "lead": 0.1,
+  "tail": 1.6,
+  "pace_note": "House pace (middle, locked 2026-11-19): ~174 wpm, pauses 0.12-0.18, beats 0.28-0.34.",
+  "lines": [
+    {
+      "id": "l01",
+      "text": "They were rushing to give a talk about kindness.",
+      "pause": 0.12
+    },
+    {
+      "id": "l02",
+      "text": "Some stepped right over a man who needed help.",
+      "pause": 0.31
+    },
+    {
+      "id": "l03",
+      "text": "In 1973, Princeton psychologists John Darley and Daniel Batson published the study.",
+      "pause": 0.12
+    },
+    {
+      "id": "l04",
+      "text": "Their subjects: seminary students.",
+      "pause": 0.12
+    },
+    {
+      "id": "l05",
+      "text": "Each had to walk to another building and give a short talk.",
+      "pause": 0.12
+    },
+    {
+      "id": "l06",
+      "text": "For some, the topic was the Good Samaritan. Stopping for a stranger.",
+      "pause": 0.18
+    },
+    {
+      "id": "l07",
+      "text": "Then the switch. Some were told they had time. Others: you're late. Hurry.",
+      "pause": 0.15
+    },
+    {
+      "id": "l08",
+      "text": "In an alley on the way, a man sat slumped in a doorway. He coughed. He groaned.",
+      "pause": 0.28
+    },
+    {
+      "id": "l09",
+      "text": "With time to spare, sixty-three percent stopped to help.",
+      "pause": 0.15
+    },
+    {
+      "id": "l10",
+      "text": "In a hurry? Ten percent.",
+      "pause": 0.31
+    },
+    {
+      "id": "l11",
+      "text": "The Good Samaritan talk? No significant difference.",
+      "pause": 0.12
+    },
+    {
+      "id": "l12",
+      "text": "In this study, the clock mattered more than the sermon.",
+      "pause": 0.3
+    },
+    {
+      "id": "l13",
+      "text": "Later, almost all of them remembered him.",
+      "pause": 0.12
+    },
+    {
+      "id": "l14",
+      "text": "They saw him. Their minds just never caught up.",
+      "pause": 0.12
+    },
+    {
+      "id": "l15",
+      "text": "The researchers compared it to a narrowing map.",
+      "pause": 0.28
+    },
+    {
+      "id": "l16",
+      "text": "You do this every day.",
+      "pause": 0.12
+    },
+    {
+      "id": "l17",
+      "text": "The text you'll answer later. The face you didn't look at. The question you rushed past.",
+      "pause": 0.3
+    },
+    {
+      "id": "l18",
+      "text": "But it isn't who you are. It's how fast you're moving.",
+      "pause": 0.28
+    },
+    {
+      "id": "l19",
+      "text": "One small study. Forty students. But you've felt it.",
+      "pause": 0.28
+    },
+    {
+      "id": "l20",
+      "text": "Tomorrow, leave five minutes early.",
+      "pause": 0.12
+    },
+    {
+      "id": "l21",
+      "text": "Spend them looking up.",
+      "pause": 0.34
+    },
+    {
+      "id": "l22",
+      "text": "So who did you walk past today?",
+      "pause": 0.1
+    }
+  ]
+}

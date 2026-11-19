@@ -1,0 +1,95 @@
+{
+  "title": "The Last Room",
+  "voice": "am_michael",
+  "speed": 1.02,
+  "lead": 0.1,
+  "tail": 1.6,
+  "lines": [
+    {
+      "id": "l01",
+      "text": "You walk into a room, and forget why you came in.",
+      "pause": 0.18
+    },
+    {
+      "id": "l02",
+      "text": "It's not your memory failing. It's the door.",
+      "pause": 0.34
+    },
+    {
+      "id": "l03",
+      "text": "In 2011, psychologist Gabriel Radvansky, at the University of Notre Dame, ran a simple test.",
+      "pause": 0.16
+    },
+    {
+      "id": "l04",
+      "text": "People carried objects from one table to another, room after room.",
+      "pause": 0.15
+    },
+    {
+      "id": "l05",
+      "text": "Some walked through a doorway. Others walked the same distance, with no door at all.",
+      "pause": 0.17
+    },
+    {
+      "id": "l06",
+      "text": "The ones who crossed a doorway forgot more.",
+      "pause": 0.34
+    },
+    {
+      "id": "l07",
+      "text": "Your brain doesn't record life like a film. It cuts it into scenes.",
+      "pause": 0.15
+    },
+    {
+      "id": "l08",
+      "text": "A doorway tells it the scene is over. File the old one. Start fresh.",
+      "pause": 0.16
+    },
+    {
+      "id": "l09",
+      "text": "Psychologists call it an event boundary.",
+      "pause": 0.32
+    },
+    {
+      "id": "l10",
+      "text": "Most people think it's a glitch. It's a tool.",
+      "pause": 0.29
+    },
+    {
+      "id": "l11",
+      "text": "Before you walk through a door, say what you came for. Out loud.",
+      "pause": 0.15
+    },
+    {
+      "id": "l12",
+      "text": "Carry it across the line on purpose.",
+      "pause": 0.29
+    },
+    {
+      "id": "l13",
+      "text": "And the thought you can't put down tonight?",
+      "pause": 0.15
+    },
+    {
+      "id": "l14",
+      "text": "Leave it on the other side of a door. Walk out. Let the scene end.",
+      "pause": 0.32
+    },
+    {
+      "id": "l15",
+      "text": "Every room you enter, your brain asks one question.",
+      "pause": 0.15
+    },
+    {
+      "id": "l16",
+      "text": "What do we keep?",
+      "pause": 0.33
+    },
+    {
+      "id": "l17",
+      "text": "So what did you leave in the last room?",
+      "pause": 0.1
+    }
+  ],
+  "pace_note": "House pace (middle, locked 2026-11-19): ~174 wpm, pauses 0.12-0.18, beats 0.28-0.34."
+}

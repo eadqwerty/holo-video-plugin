@@ -1,0 +1,104 @@
+[
+ {
+  "id": "l01",
+  "text": "You walk into a room, and forget why you came in.",
+  "t0": 0.1,
+  "t1": 2.908
+ },
+ {
+  "id": "l02",
+  "text": "It's not your memory failing. It's the door.",
+  "t0": 3.088,
+  "t1": 5.752
+ },
+ {
+  "id": "l03",
+  "text": "In 2011, psychologist Gabriel Radvansky, at the University of Notre Dame, ran a simple test.",
+  "t0": 6.092,
+  "t1": 13.837
+ },
+ {
+  "id": "l04",
+  "text": "People carried objects from one table to another, room after room.",
+  "t0": 13.997,
+  "t1": 18.171
+ },
+ {
+  "id": "l05",
+  "text": "Some walked through a doorway. Others walked the same distance, with no door at all.",
+  "t0": 18.321,
+  "t1": 23.231
+ },
+ {
+  "id": "l06",
+  "text": "The ones who crossed a doorway forgot more.",
+  "t0": 23.401,
+  "t1": 25.747
+ },
+ {
+  "id": "l07",
+  "text": "Your brain doesn't record life like a film. It cuts it into scenes.",
+  "t0": 26.087,
+  "t1": 30.396
+ },
+ {
+  "id": "l08",
+  "text": "A doorway tells it the scene is over. File the old one. Start fresh.",
+  "t0": 30.546,
+  "t1": 34.887
+ },
+ {
+  "id": "l09",
+  "text": "Psychologists call it an event boundary.",
+  "t0": 35.047,
+  "t1": 37.477
+ },
+ {
+  "id": "l10",
+  "text": "Most people think it's a glitch. It's a tool.",
+  "t0": 37.797,
+  "t1": 40.351
+ },
+ {
+  "id": "l11",
+  "text": "Before you walk through a door, say what you came for. Out loud.",
+  "t0": 40.641,
+  "t1": 44.163
+ },
+ {
+  "id": "l12",
+  "text": "Carry it across the line on purpose.",
+  "t0": 44.313,
+  "t1": 46.476
+ },
+ {
+  "id": "l13",
+  "text": "And the thought you can't put down tonight?",
+  "t0": 46.766,
+  "t1": 48.633
+ },
+ {
+  "id": "l14",
+  "text": "Leave it on the other side of a door. Walk out. Let the scene end.",
+  "t0": 48.783,
+  "t1": 52.946
+ },
+ {
+  "id": "l15",
+  "text": "Every room you enter, your brain asks one question.",
+  "t0": 53.266,
+  "t1": 56.439
+ },
+ {
+  "id": "l16",
+  "text": "What do we keep?",
+  "t0": 56.589,
+  "t1": 57.572
+ },
+ {
+  "id": "l17",
+  "text": "So what did you leave in the last room?",
+  "t0": 57.902,
+  "t1": 59.928
+ }
+]

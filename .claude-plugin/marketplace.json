@@ -1,0 +1,8 @@
+{
+  "name": "holo-video",
+  "owner": { "name": "HOLO" },
+  "metadata": { "description": "The HOLO video plugin: code-made cinematic mindset shorts." },
+  "plugins": [
+    { "name": "holo-video", "source": "./", "description": "Make HOLO-style 60-70 s shorts entirely in code (script, voice, 3D storyboard, sound, render, QA)." }
+  ]
+}

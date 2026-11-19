@@ -1,0 +1,350 @@
+{
+ "duration": 65.247,
+ "cuts": [
+  {
+   "t": 2.613,
+   "kind": "smear",
+   "toWhite": true
+  },
+  {
+   "t": 6.123,
+   "kind": "smear",
+   "toWhite": false
+  },
+  {
+   "t": 8.063,
+   "kind": "cut",
+   "toWhite": false
+  },
+  {
+   "t": 11.302999999999999,
+   "kind": "glitch",
+   "toWhite": true
+  },
+  {
+   "t": 12.899000000000001,
+   "kind": "smear",
+   "toWhite": false
+  },
+  {
+   "t": 16.679,
+   "kind": "cut",
+   "toWhite": false
+  },
+  {
+   "t": 17.657,
+   "kind": "zoom",
+   "toWhite": true
+  },
+  {
+   "t": 20.487,
+   "kind": "whip",
+   "toWhite": true
+  },
+  {
+   "t": 23.087,
+   "kind": "cut",
+   "toWhite": true
+  },
+  {
+   "t": 23.682,
+   "kind": "smear",
+   "toWhite": false
+  },
+  {
+   "t": 25.942,
+   "kind": "cut",
+   "toWhite": false
+  },
+  {
+   "t": 27.378999999999998,
+   "kind": "smear",
+   "toWhite": true
+  },
+  {
+   "t": 29.918999999999997,
+   "kind": "cut",
+   "toWhite": true
+  },
+  {
+   "t": 31.212,
+   "kind": "zoom",
+   "toWhite": false
+  },
+  {
+   "t": 34.248000000000005,
+   "kind": "smear",
+   "toWhite": true
+  },
+  {
+   "t": 36.878,
+   "kind": "glitch",
+   "toWhite": false
+  },
+  {
+   "t": 38.638,
+   "kind": "smear",
+   "toWhite": true
+  },
+  {
+   "t": 40.045,
+   "kind": "zoom",
+   "toWhite": false
+  },
+  {
+   "t": 43.129000000000005,
+   "kind": "glitch",
+   "toWhite": false
+  },
+  {
+   "t": 45.36,
+   "kind": "smear",
+   "toWhite": true
+  },
+  {
+   "t": 47.378,
+   "kind": "whip",
+   "toWhite": true
+  },
+  {
+   "t": 50.178,
+   "kind": "cut",
+   "toWhite": true
+  },
+  {
+   "t": 51.264,
+   "kind": "smear",
+   "toWhite": false
+  },
+  {
+   "t": 53.704,
+   "kind": "cut",
+   "toWhite": false
+  },
+  {
+   "t": 54.730000000000004,
+   "kind": "whip",
+   "toWhite": true
+  },
+  {
+   "t": 57.388000000000005,
+   "kind": "smear",
+   "toWhite": false
+  },
+  {
+   "t": 59.657000000000004,
+   "kind": "smear",
+   "toWhite": true
+  },
+  {
+   "t": 60.037,
+   "kind": "cut",
+   "toWhite": true
+  },
+  {
+   "t": 62.07,
+   "kind": "zoom",
+   "toWhite": false
+  },
+  {
+   "t": 62.769999999999996,
+   "kind": "cut",
+   "toWhite": false
+  }
+ ],
+ "glitches": [
+  {
+   "t": 11.383,
+   "d": 0.1,
+   "a": 0.7
+  },
+  {
+   "t": 19.847,
+   "d": 0.08,
+   "a": 0.6
+  },
+  {
+   "t": 44.059000000000005,
+   "d": 0.1,
+   "a": 0.8
+  },
+  {
+   "t": 63.190000000000005,
+   "d": 0.12,
+   "a": 0.7
+  }
+ ],
+ "texts": [
+  {
+   "t0": 1.7799999999999998,
+   "t1": 2.53,
+   "str": "Never finished"
+  },
+  {
+   "t0": 3.893,
+   "t1": 5.193,
+   "str": "Still working"
+  },
+  {
+   "t0": 4.893000000000001,
+   "t1": 5.893000000000001,
+   "str": "Right now"
+  },
+  {
+   "t0": 6.343,
+   "t1": 8.033000000000001,
+   "str": "1920s"
+  },
+  {
+   "t0": 8.063,
+   "t1": 9.663,
+   "str": "Berlin"
+  },
+  {
+   "t0": 12.363,
+   "t1": 12.869000000000002,
+   "str": "A waiter"
+  },
+  {
+   "t0": 15.339,
+   "t1": 16.648999999999997,
+   "str": "Every open order"
+  },
+  {
+   "t0": 16.698999999999998,
+   "t1": 17.598999999999997,
+   "str": "Perfectly"
+  },
+  {
+   "t0": 19.697,
+   "t1": 20.456999999999997,
+   "str": "Gone"
+  },
+  {
+   "t0": 21.206999999999997,
+   "t1": 23.057,
+   "str": "Bluma Zeigarnik"
+  },
+  {
+   "t0": 25.921999999999997,
+   "t1": 27.348999999999997,
+   "str": "Interrupted"
+  },
+  {
+   "t0": 29.918999999999997,
+   "t1": 31.182,
+   "str": "2x"
+  },
+  {
+   "t0": 31.372,
+   "t1": 32.672,
+   "str": "Open loop"
+  },
+  {
+   "t0": 33.211999999999996,
+   "t1": 34.211999999999996,
+   "str": "In the background"
+  },
+  {
+   "t0": 35.467999999999996,
+   "t1": 36.848,
+   "str": "Almost starting"
+  },
+  {
+   "t0": 37.827999999999996,
+   "t1": 38.608,
+   "str": "Never sent"
+  },
+  {
+   "t0": 39.288,
+   "t1": 40.015,
+   "str": "Someday"
+  },
+  {
+   "t0": 41.684999999999995,
+   "t1": 43.099000000000004,
+   "str": "Open tabs"
+  },
+  {
+   "t0": 44.009,
+   "t1": 45.33,
+   "str": "Nobody tells you"
+  },
+  {
+   "t0": 46,
+   "t1": 46.9,
+   "str": "Don't finish it"
+  },
+  {
+   "t0": 46.66,
+   "t1": 47.348,
+   "str": "Close it"
+  },
+  {
+   "t0": 49.278,
+   "t1": 50.147999999999996,
+   "str": "A specific plan"
+  },
+  {
+   "t0": 50.178,
+   "t1": 51.178,
+   "str": "Quiets the loop"
+  },
+  {
+   "t0": 52.484,
+   "t1": 53.674,
+   "str": "Not done"
+  },
+  {
+   "t0": 53.704,
+   "t1": 54.7,
+   "str": "Decided"
+  },
+  {
+   "t0": 54.93,
+   "t1": 55.93,
+   "str": "Pick one"
+  },
+  {
+   "t0": 56.309999999999995,
+   "t1": 57.309999999999995,
+   "str": "Exactly when"
+  },
+  {
+   "t0": 58.068,
+   "t1": 59.068,
+   "str": "Two minutes"
+  },
+  {
+   "t0": 58.808,
+   "t1": 59.627,
+   "str": "Tonight"
+  },
+  {
+   "t0": 61.056999999999995,
+   "t1": 62.04,
+   "str": "Either way"
+  },
+  {
+   "t0": 62.25,
+   "t1": 64.64699999999999,
+   "str": "Which one is still running?"
+  }
+ ],
+ "hud": [
+  0.4,
+  3.513,
+  11.582999999999998,
+  14.099,
+  20.987,
+  27.979,
+  37.128,
+  49.378,
+  55.53,
+  57.688
+ ],
+ "logo": [
+  23.387,
+  64.747
+ ]
+}

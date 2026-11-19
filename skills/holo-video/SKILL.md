@@ -1,6 +1,6 @@
 ---
 name: holo-video
-description: Make a 16:9, 60-70 s cinematic "hidden mechanism" mindset short in the HOLO style (chrome android, pi-digit glyph matte, red accents, smear/whip/zoom transitions, Kokoro narration), entirely in code - sourced script, narration, a three.js storyboard, procedural sound, render and QA. Use when the user asks for a HOLO video or episode, "a video like these", a new episode from the topic backlog, or to set up, re-render or fix an episode.
+description: Make a vertical 9:16 (default) or 16:9, 60-70 s cinematic "hidden mechanism" mindset short in the HOLO style (chrome android, pi-digit glyph matte, red accents, smear/whip/zoom transitions, Kokoro narration), entirely in code - sourced script, narration, a three.js storyboard, procedural sound, render and QA. Use when the user asks for a HOLO video or episode, "a video like these", a new episode from the topic backlog, or to set up, re-render or fix an episode.
 ---
 
 # HOLO video episodes
@@ -25,11 +25,18 @@ If `PROJECT` has no `engine/`, no `.venv/` or no `engine/models/kokoro-v1.0.onnx
 
 Before the first episode in a session, read `PROJECT/docs/STYLE_SPEC.md` (binding look),
 `docs/CONTENT_FORMULA.md` (script and storyboard rules) and `docs/PIPELINE.md` (commands). Then study one example
-film: `films/ep002_doorways/film.js` is the most complete, and `films/ep003_too_busy/film.js` shows the house pace.
+film: `films/ep002_doorways/film.js` is the most complete, and `films/ep003_too_busy/film.js` (with its
+`vertical.js`) shows the house pace and vertical re-framing.
 
 ## Fixed rules (do not relax without the user's explicit say-so)
 - **The style is fixed.** Every episode uses the HOLO engine and `docs/STYLE_SPEC.md`. Don't invent a new look,
   simplify the pipeline or swap in generic motion graphics.
+- **Format: vertical 9:16 (1080x1920) by default**, for YouTube Shorts, Reels and TikTok. It renders with
+  `engine/tools/render_vertical.mjs` (engine copy `engine/web_vertical/`). Make the 16:9 version (`render.mjs`,
+  `engine/web/`) only when the user asks for a horizontal upload. Never letterbox 16:9 into 9:16.
+  - Keep vertical shots from looking too zoomed in. The default is lens x1.5 with the camera pulled back x1.2.
+  - All titles and HUD labels stay inside the UI-safe area (x 0.05-0.80, y 0.10-0.66), clear of the right-side
+    buttons and the bottom caption rows. The vertical engine enforces this; check it in the stills.
 - **House pace (locked):**
   - ~174 WPM (Kokoro `am_michael`; tune `speed` 1.02-1.10 until `voice.py` reports 170-176).
   - Pauses 0.12-0.18 s, beats 0.28-0.34 s.
@@ -70,7 +77,10 @@ film: `films/ep002_doorways/film.js` is the most complete, and `films/ep003_too_
    - Check `audio/words.json` for every word you will sync to.
    - Respell words the voice mispronounces.
 5. **Storyboard as code** (`films/<ep>/film.js`):
-   - Start from the shot templates in `engine/web/src/shots.js` and the example films.
+   - Start from the shot templates in `engine/web/src/shots.js` and the example films. (Films import `holo/...`, so
+     one `film.js` serves both formats.)
+   - **Compose vertical-first:** keep the subject near the centre, prefer one figure per shot or figures stacked in
+     depth, and avoid side-by-side pairs or put them in `vertical.js`.
    - One shot per sentence, alternating white and black.
    - Every shot shows a literal noun from its sentence. The android is "you"; the ghost hologram is the mind.
    - One title per shot, on its key word: red for the punch, grey for setup.
@@ -79,24 +89,35 @@ film: `films/ep002_doorways/film.js` is the most complete, and `films/ep003_too_
    - End on the ghost figure with a red core and the question held as a cross-cut title.
    - Time everything from narration with `N.cut('lNN')` and `w('word', n)`.
    - Write `STORYBOARD.md` as a table of line, shot, transition and title.
-6. **Look-dev stills.** Render one frame per shot and LOOK at every one:
-   - `node engine/tools/render.mjs --film films/<ep>/film.js --stills 0.6,2.4,... --outdir analysis/<ep> --size 1024x576`
-   - `$PY tools/sheet.py analysis/<ep>/sheetA.jpg 4 480 analysis/<ep>/t*.png` (about 18 per sheet).
-   - Fix framing, clipping, empty or unreadable shots, and props that are too small or out of frame. Re-render the
-     changed shots.
+6. **Look-dev stills (vertical).** Render a frame every ~2 s and LOOK at every one:
+   - `node engine/tools/render_vertical.mjs --film films/<ep>/film.js --stills 0.8,2.8,4.8,... --outdir analysis/<ep>_vert --size 540x960`
+   - `$PY tools/sheet.py analysis/<ep>_vert/sheetA.jpg 9 213 analysis/<ep>_vert/t*.png` (18 per sheet).
+   - Fix shots whose subject is off-centre or cut off by adding `films/<ep>/vertical.js` (copy the ep003 one). Each
+     entry picks the shot playing at `at` (use `cut('lNN')` / `w('word')`) and adjusts its camera:
+     - `follow: n` keeps the n-th figure of the scene centred (figures count in creation order);
+     - `followY` sets the aim height;
+     - `dist: k` pulls back, multiplying the default;
+     - `zoom` sets the lens;
+     - `aim`, `pos`, `shift` or `camera: (lt, dur, c) => ({pos, target, fov})` give full control.
+   - Also fix props that are too small, unreadable titles and empty frames in `film.js`. Re-render the changed shots.
 7. **Render and sound:**
-   - `node engine/tools/render.mjs --film films/<ep>/film.js --cues films/<ep>/audio/cues.json`
+   - `node engine/tools/render_vertical.mjs --film films/<ep>/film.js --cues films/<ep>/audio/cues.json`
    - `$PY engine/audio/sound.py films/<ep>/audio/cues.json films/<ep>/audio/mix.wav --voice films/<ep>/audio/voice.wav --seed <n>`
-   - `node engine/tools/render.mjs --film films/<ep>/film.js --out renders/<ep>_v1_video.mp4 --workers 4`
+   - `node engine/tools/render_vertical.mjs --film films/<ep>/film.js --out renders/vertical/<ep>_v1_video.mp4 --workers 4`
      takes about 3 minutes for 65 s on an M-series Mac. Run it in the background and wait for completion.
-   - `ffmpeg -y -i renders/<ep>_v1_video.mp4 -i films/<ep>/audio/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -shortest renders/<ep>_v1.mp4`
+   - `ffmpeg -y -i renders/vertical/<ep>_v1_video.mp4 -i films/<ep>/audio/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -shortest renders/vertical/<ep>_v1.mp4`
+     This is the upload file.
    - Phone copy, under 30 MB:
-     `ffmpeg -y -i renders/<ep>_v1.mp4 -vf scale=1280:-2 -c:v libx264 -crf 24 -maxrate 3M -bufsize 6M -c:a aac -b:a 160k -movflags +faststart renders/phone/<ep>_v1_phone.mp4`
+     `ffmpeg -y -i renders/vertical/<ep>_v1.mp4 -c:v libx264 -crf 24 -maxrate 3M -bufsize 6M -c:a aac -b:a 160k -movflags +faststart renders/phone/<ep>_v1_phone.mp4`
+   - **Horizontal 16:9 (only on request):** run the same commands with `engine/tools/render.mjs` (default
+     1920x1080), output in `renders/`. Look-dev for it uses `--size 1024x576`. The same `mix.wav` works for both.
 8. **QA:**
    - Contact sheet of the final file:
-     `ffmpeg -ss 1 -i renders/<ep>_v1.mp4 -vf fps=1/2.5,scale=480:-2 -q:v 3 <tmp>/f%03d.jpg`, then
-     `$PY tools/contact_sheet.py <tmp> analysis/<ep>_v1_sheet.jpg 6 320 1.0 2.5`. Look at it.
-   - `$PY tools/qa.py analysis/<ep>/t*.png` checks the spec numbers: paper ~238-241, glyph pitch, red (185,83,92).
+     `ffmpeg -ss 1 -i renders/vertical/<ep>_v1.mp4 -vf fps=1/2.5,scale=216:-2 -q:v 3 <tmp>/f%03d.jpg`, then
+     `$PY tools/contact_sheet.py <tmp> analysis/<ep>_v1_sheet.jpg 14 136 1.0 2.5`. Look at it.
+     Blank or blurred frames right at a cut are transitions; check them with a still if unsure.
+   - `$PY tools/qa.py analysis/<ep>_vert/t*.png` checks the spec numbers: paper ~238-241, glyph pitch, red
+     (185,83,92). It works for portrait and landscape stills.
    - If the user has their own reference frames, `tools/compare.py` compares side by side.
 9. **Deliver.** Give the paths, length, WPM and shots per minute, what works, and what is weak. Send the phone copy
    if the host can send files.
@@ -112,4 +133,7 @@ film: `films/ep002_doorways/film.js` is the most complete, and `films/ep003_too_
   `engine/blender/build_props.py` when a script needs a literal noun the kit lacks.
 - Poses live in `engine/web/src/android.js` (`POSES`, `walkPose`, `walkWith`, `extend`, `mixPose`). Custom poses
   can be defined inside a film (see `SLUMP` and `HELP` in ep003).
+- Two engine copies: `engine/web/` (16:9) and `engine/web_vertical/` (9:16, the default). A change to shared engine
+  code (android, props, env, post) must be made in both. Only `runtime.js`, `text.js`, `post.js` and `android.js`
+  differ, by the vertical edits.
 - Render one still first after any engine change: a broken shader shows up as a black frame.

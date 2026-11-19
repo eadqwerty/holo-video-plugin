@@ -1,6 +1,6 @@
 # holo-video: a Claude Code plugin
 
-Makes 16:9, 60–70 s cinematic "hidden mechanism" mindset shorts in the HOLO style, entirely in code. Claude:
+Makes vertical 9:16 (default, for Shorts, Reels and TikTok) or 16:9, 60–70 s cinematic "hidden mechanism" mindset shorts in the HOLO style, entirely in code. Claude:
 1. picks or receives a topic and verifies the facts;
 2. writes a sourced script;
 3. voices it with an offline stock voice (Kokoro);

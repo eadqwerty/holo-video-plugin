@@ -5,7 +5,7 @@ This document is binding. Every episode uses this visual system unless the user 
 ## 1. Format
 | | Value | Engine |
 |---|---|---|
-| Aspect / master | 16:9, **1920×1080 @ 30 fps** (refs are 1024×576 delivery copies of a 1080p master: glyph pitch 3.2×5.33 px = 6×10 px × 0.533) | `render.mjs --size 1920x1080 --fps 30` |
+| Aspect / master | **Default delivery: vertical 9:16, 1080×1920 @ 30 fps** (user's choice, 2026-11-19), using `engine/web_vertical`: same look; glyph cells, titles and HUD scale by the short side; text stays in the UI-safe area x 0.05–0.80, y 0.10–0.66; framing is lens ×1.5 with the camera pulled back ×1.2, plus per-episode `vertical.js` re-framing. The 16:9 master below stays available on request. 16:9: **1920×1080 @ 30 fps** (refs are 1024×576 delivery copies of a 1080p master: glyph pitch 3.2×5.33 px = 6×10 px × 0.533) | `render.mjs --size 1920x1080 --fps 30` |
 | Length | 50–82 s (target 60–70 s) | film `duration` |
 | Delivery encode | H.264 CRF 18, yuv420p, bt709, AAC 256k, −14 LUFS | `render.mjs` + `sound.py` |
 

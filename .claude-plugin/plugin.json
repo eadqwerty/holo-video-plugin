@@ -1,7 +1,7 @@
 {
   "name": "holo-video",
-  "version": "0.1.1",
-  "description": "Make 16:9, 60-70 s cinematic 'hidden mechanism' mindset shorts in the HOLO style, entirely in code: sourced script, Kokoro narration, a three.js storyboard (chrome android, pi-digit glyph matte, red accents, smear/whip/zoom cuts), procedural sound, render and QA.",
+  "version": "0.2.0",
+  "description": "Make vertical 9:16 (default) or 16:9, 60-70 s cinematic 'hidden mechanism' mindset shorts in the HOLO style, entirely in code: sourced script, Kokoro narration, a three.js storyboard (chrome android, pi-digit glyph matte, red accents, smear/whip/zoom cuts), procedural sound, render and QA.",
   "author": { "name": "HOLO" },
   "license": "SEE NOTICE.md",
   "keywords": ["video", "shorts", "three.js", "motion-graphics", "narration", "psychology"]

@@ -73,3 +73,14 @@ This is deterministic. Edit anatomy (metaball table), armour cuts or accents in 
 
 ## Rebuilding hero props
 `blender -b --python engine/blender/build_props.py -- engine/assets/props analysis/props_prev`
+
+## Vertical 9:16 version: THE DEFAULT DELIVERABLE (YouTube Shorts / Reels / TikTok)
+Render every new episode this way. Do the 16:9 render (section 5) only when the user asks for a horizontal upload.
+- Separate engine copy `engine/web_vertical/`, rendered with `engine/tools/render_vertical.mjs` (same flags; default `--size 1080x1920`). The 16:9 engine and renders are unchanged.
+- Look-dev: `node engine/tools/render_vertical.mjs --film films/<ep>/film.js --stills 0.8,2.8,... --outdir analysis/<ep>_vert --size 540x960`. Shots whose subject sits off-centre in 16:9 get an entry in `films/<ep>/vertical.js`:
+  - `follow: n` keeps the n-th figure centred;
+  - `dist: k` pulls back;
+  - `aim`, `pos`, `shift` or `camera` take over the camera completely.
+
+  See `films/ep003_too_busy/vertical.js`.
+- Render: `node engine/tools/render_vertical.mjs --film films/<ep>/film.js --out renders/vertical/<ep>_vN_vertical_video.mp4 --workers 4`. Add the same `audio/mix.wav` with ffmpeg; the sound cues are the same as the 16:9 version.

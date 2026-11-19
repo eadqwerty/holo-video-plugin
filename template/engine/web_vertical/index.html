@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>HOLO vertical</title>
+<style>
+@font-face{font-family:'Michroma';src:url(/engine/fonts/Michroma-Regular.ttf)}
+@font-face{font-family:'PlexMono';src:url(/engine/fonts/IBMPlexMono-Medium.ttf)}
+@font-face{font-family:'ShareMono';src:url(/engine/fonts/ShareTechMono-Regular.ttf)}
+@font-face{font-family:'ArchivoBlack';src:url(/engine/fonts/ArchivoBlack-Regular.ttf)}
+@font-face{font-family:'Fraktur';src:url(/engine/fonts/UnifrakturCook-Bold.ttf)}
+html,body{margin:0;background:#000;overflow:hidden}
+canvas{display:block}
+</style>
+<script type="importmap">{"imports":{
+ "three":"/engine/node_modules/three/build/three.module.js",
+ "three/addons/":"/engine/node_modules/three/examples/jsm/",
+ "holo/":"/engine/web_vertical/src/"}}</script>
+</head><body>
+<script type="module">
+import { boot } from 'holo/runtime.js';
+const q = new URLSearchParams(location.search);
+boot({ film: q.get('film'), width: +q.get("w") || 1080, height: +q.get("h") || 1920, fps: +q.get('fps') || 30, android: q.get('android') })
+  .catch(e => { console.error('HOLO boot failed', e.stack || e); });
+</script>
+</body></html>

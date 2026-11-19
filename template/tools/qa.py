@@ -1,7 +1,8 @@
 """Spec check for HOLO frames (no reference footage needed).
 
 usage: .venv/bin/python tools/qa.py frame1.png [frame2.png ...]
-Use stills rendered at --size 1024x576 (the glyph cell scales with render size). Measures each frame at 1024x576 and compares with docs/STYLE_SPEC.md targets:
+Use stills rendered at --size 1024x576 (16:9) or 540x960 / 576x1024 (9:16); the glyph cell scales with the short side.
+Measures each frame with its short side at 576 px (1024x576 or 576x1024) and compares with docs/STYLE_SPEC.md targets:
   paper (white-scene background luminance) 236-243 (spec 238-241)
   glyph pitch ~3.2 px across x ~5.3 px down (6x10 px cells @1080p)
   red accents ~ (185, 83, 92) on white
@@ -11,10 +12,11 @@ import sys
 import numpy as np
 from PIL import Image
 
-W, H = 1024, 576
+W, H = 1024, 576   # set per frame (portrait frames use 576x1024)
 
 
 def pitch(L):
+    H, W = L.shape
     best, box = -1, (0, 0)
     for y in range(0, H - 160, 40):
         for x in range(0, W - 160, 40):
@@ -34,7 +36,9 @@ def pitch(L):
 
 
 def check(path):
-    a = np.asarray(Image.open(path).convert('RGB').resize((W, H), Image.LANCZOS), dtype=float)
+    im = Image.open(path).convert('RGB')
+    size = (576, 1024) if im.height > im.width else (1024, 576)
+    a = np.asarray(im.resize(size, Image.LANCZOS), dtype=float)
     L = a @ [0.299, 0.587, 0.114]
     white = (L > 200).mean() > 0.35
     out, flags = [], []

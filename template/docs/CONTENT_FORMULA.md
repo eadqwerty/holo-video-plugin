@@ -57,9 +57,10 @@
    - zoom when going "inside" (into the head, into an object)
    - whip at chapter turns
    - glitch on the turn/emphasis lines
-8. **Angle cuts:** hold a scene across a sentence but cut to a new camera on its emphasis word (**~28 shots per minute**, the house pace).
-9. **Hero props** (brain, bulb, headphones, phone, cabinet, bed, clock, hourglass) for literal nouns; build new ones in `build_props.py` when an episode needs them.
-10. **End** on the ghost figure with a red core in the dark, with the question title held to the end and the channel emblem flashing in the last half second.
+8. **Vertical-first framing (default delivery is 9:16):** keep the subject near the centre of frame. Prefer one figure per shot, or figures stacked in depth rather than side by side. Put side-by-side compositions in `vertical.js` (follow one figure, then cut to the other).
+9. **Angle cuts:** hold a scene across a sentence but cut to a new camera on its emphasis word (**~28 shots per minute**, the house pace).
+10. **Hero props** (brain, bulb, headphones, phone, cabinet, bed, clock, hourglass) for literal nouns; build new ones in `build_props.py` when an episode needs them.
+11. **End** on the ghost figure with a red core in the dark, with the question title held to the end and the channel emblem flashing in the last half second.
 
 ## Topic bank (original; verify facts before writing)
 | # | Anchor | Mechanism → lesson | Closing question |

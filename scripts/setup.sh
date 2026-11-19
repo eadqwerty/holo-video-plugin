@@ -85,6 +85,7 @@ say "Smoke test: one TTS line and one rendered still"
 TMP="$TARGET/analysis/_setup_check"; mkdir -p "$TMP"
 echo '[{"id":"t","text":"Setup check.","voice":"am_michael","speed":1.06}]' > "$TMP/l.json"
 "$VPY" "$TARGET/engine/tools/tts.py" "$TMP/l.json" "$TMP" >/dev/null && echo "  voice ok ($TMP/t.wav)"
-( cd "$TARGET" && node engine/tools/render.mjs --film films/ep002_doorways/film.js --stills 5 --outdir analysis/_setup_check --size 640x360 >/dev/null ) && echo "  render ok ($TMP/t005.00.png)"
+( cd "$TARGET" && node engine/tools/render_vertical.mjs --film films/ep003_too_busy/film.js --stills 5 --outdir analysis/_setup_check --size 360x640 >/dev/null ) && echo "  vertical render ok ($TMP/t005.00.png)"
+( cd "$TARGET" && node engine/tools/render.mjs --film films/ep002_doorways/film.js --stills 6 --outdir analysis/_setup_check --size 640x360 >/dev/null ) && echo "  horizontal render ok ($TMP/t006.00.png)"
 
 say "Done. Open Claude Code in $TARGET and ask for an episode (or /holo <topic>)."

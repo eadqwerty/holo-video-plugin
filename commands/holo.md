@@ -1,5 +1,5 @@
 ---
-description: 'Make a HOLO-style video episode (e.g. /holo the Pygmalion effect, /holo next from the backlog, /holo setup)'
+description: 'Make a HOLO-style video episode, vertical 9:16 by default (e.g. /holo, /holo the Pygmalion effect, /holo setup)'
 argument-hint: <topic | nothing (Claude picks) | "setup" | "re-render <episode>">
 ---
 
@@ -11,4 +11,5 @@ Use the `holo-video` skill for: $ARGUMENTS
   make the episode; don't ask the user to choose.
 - A topic or idea: make one episode about it, following the skill's workflow end to end.
 - "re-render <episode>": re-run voice/render/sound for that episode at the house pace.
+- Output is vertical 9:16 unless the user says horizontal, 16:9 or landscape. Then also, or only, render with `render.mjs`.
 Make one episode at a time and show the user the result before starting another.
